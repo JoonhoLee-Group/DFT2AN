@@ -1,0 +1,23 @@
+$molecule
+0 1
+O       0.000000000000000      0.000000000000000     1.14304
+C       0.000000000000000      0.000000000000000     0.000000000000000
+$end
+
+
+
+$rem
+jobtype sp
+method pbe
+pseudo GTH-PBE
+basis DZVP-MOLOPT-PBE-GTH
+!DFT_D 6
+unrestricted true
+scf_convergence 8
+thresh 14
+scf_max_cycles 200
+mem_total 200000
+scf_algorithm diis
+
+$end
+

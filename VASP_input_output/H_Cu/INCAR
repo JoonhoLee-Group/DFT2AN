@@ -1,0 +1,53 @@
+SYSTEM = Cu_H
+ISTART = 0
+ICHARG = 2
+ENCUT  = 600
+LH5 = .FALSE.
+
+# single point 
+#IBRION = -1
+
+# geometry relaxation 
+NSW    = 50        
+IBRION = 2        
+EDIFFG = -1E-3
+
+# DFT functional
+GGA = PE
+
+# spin-polarized calculation
+ISPIN = 2
+MAGMOM = 12*0 1
+
+# Disperson correction
+IVDW = 12
+
+# SCF 
+ALGO = Normal
+NELM  = 200
+EDIFF = 1E-4
+
+# Gaussian smearing (turn off for DOS calculation)
+#ISMEAR = 0
+#SIGMA  = 0.10
+
+# Fermi smearing (turn off for DOS calculation)
+ISMEAR = -1
+SIGMA  = 0.027
+
+# DOS calculation
+#ISMEAR = -5
+#SIGMA  = 0.10
+#LORBIT = 11
+#NEDOS  = 4001 
+#EMIN   = -10
+#EMAX   =  10
+
+# constant potential
+#LSOL = .TRUE.
+#ISOL = 2
+#C_MOLAR = 1.0
+#R_ION = 4.0
+#EFERMI_ref = 5.0
+#IBRION = 2
+#POTIM = 0.000001

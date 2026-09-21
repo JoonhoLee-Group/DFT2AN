@@ -1,0 +1,137 @@
+
+Running job 1 of 1
+                  Welcome to Q-Chem
+           with Periodic Boundary Conditions
+     A Quantum Leap Into The Future Of Chemistry
+
+ Adam Rettig, Xintian Feng, Meng-Fu Chen, Hieu Dinh, Anton Ni,
+ Stephen Quiton, Paul J. Robinson, Jinghong Zhang, Joonho Lee
+
+Contributors to earlier versions of Q-Chem not listed above:
+ Evgeny Epifanovsky, Leo Cunha, Jerome F. Gonthier, Kuan-Yu Liu
+ Input file: /n/home10/lko/qcpbc/scratch//INPUT.scratch20260713151124/INPUT.0
+ Scratch folder: /n/home10/lko/qcpbc/scratch//INPUT.scratch20260713151124
+ Auxillary files located at: /n/home10/lko/qcpbc/qcpbc/qcaux
+ Q-Chem begins on Mon Jul 13 15:11:25 2026
+
+ -------------------------------------------------------------
+ User input:
+ -------------------------------------------------------------
+ $molecule
+ 0 1
+ O       0.000000000000000      0.000000000000000     1.14304
+ C       0.000000000000000      0.000000000000000     0.000000000000000
+ $end
+ 
+ 
+ 
+ $rem
+ jobtype sp
+ method pbe
+ pseudo GTH-PBE
+ basis DZVP-MOLOPT-PBE-GTH
+ !DFT_D 6
+ unrestricted false
+ scf_convergence 8
+ thresh 14
+ scf_max_cycles 200
+ mem_total 200000
+ scf_algorithm diis
+ 
+ $end
+ 
+ 
+ -------------------------------------------------------------
+ Running molecular job
+Turn off frozen core for pseudopotential calculation.
+
+ Here are some information from input settings:
+ Using 8 OpenMP threads.
+ Total memory available: 200000 MB 
+ Print level: 0
+
+ Requested Exchange Correlation Functionals: 
+    1.00000 pbe_x
+    1.00000 pbe_c
+ Whether to save data to scratch folder: Yes (rem: save_data_to_scratch_folder = true/false)
+ The file format is arma_ascii (rem: scratch_file_type = arma_binary/arma_ascii/arma_raw_binary/arma_raw_ascii/arma_csv_ascii)
+ The output matrix will be in libqints ordering (rem: is_qchem_dmatrix_ordering = true/false)
+ Only minium fraction of result matrices will be printed to shorten the size of output file.
+ To print full result matrices, set rem print_min_result_matrix = false
+ Here are some rems that were not able to be recognized: 
+  basis
+  geom_opt
+  pseudo
+  scf_max_cycles
+  xcfunc/coeff
+  xcfunc/fname
+
+
+ ------------------------------------------------------------------------
+                     Coordinates of Atoms (Angstroms)
+    I Atom            X                   Y                   Z
+ ------------------------------------------------------------------------
+    1    O        0.0000000000        0.0000000000        1.1430400002
+    2    C        0.0000000000        0.0000000000        0.0000000000
+ ------------------------------------------------------------------------
+ Running RSCF with 5 alpha, 5 beta electrons,
+nmo = 26, and 26 basis functions, 507 basis function pairs (threshold: 1.00e-14).
+ SCF starts from Hcore guess
+ ----------------------------------------------
+ Guess energy: -15.1516615614
+ ----------------------------------------------
+  Cycle       Energy         DIIS error
+ ----------------------------------------------
+    1      -7.9862636799      1.96e-01  
+    2     -21.3627486849      2.61e-01  
+    3     -21.0247772257      5.64e-02  
+    4     -21.4136241764      9.55e-02  
+    5     -21.6067991617      6.00e-02  
+    6     -21.6699093489      3.01e-02  
+    7     -21.6701768783      2.16e-03  
+    8     -21.6702601738      1.09e-03  
+    9     -21.6702604966      6.69e-05  
+   10     -21.6702604967      1.17e-06  
+   11     -21.6702604967      9.86e-08  
+   12     -21.6702604967      1.06e-08  
+   13     -21.6702604967      4.07e-10  
+   13     -21.6702604967      4.07e-10  Convergence criterion met
+ ----------------------------------------------
+ Final energy components:
+ DFT Correlation   Energy =  -0.36079754562871
+ DFT Exchange      Energy =  -4.72418338009298
+ Kinetic           Energy =  16.16520190313028
+ Nuclear Repulsion Energy =  11.11094367581187
+ Pseudo Potential  Energy = -72.64365531536538
+ SEOQF             Energy =   0.00000000882844
+ Total Coulomb     Energy =  28.78223015663950
+ ----------------------------------------------
+ Final SCF energy is -21.6702604967
+ Inaccurate integrated density by DFT XC:
+   Number of electrons = 14
+   Numerical integral  =     9.999991599029
+   Relative error      =    28.5714885784 %
+ --------------------------------------------------------------------------------
+                             Orbital Energies (a.u.)
+ --------------------------------------------------------------------------------
+
+ -- Occupied --
+   -1.0722   -0.5138   -0.4257   -0.4257   -0.3185
+ -- Lowest 8 Virtual --
+   -0.0680   -0.0680    0.2606    0.3487    0.3487    0.4152    0.5278    0.5278
+ --------------------------------------------------------------------------------
+ Time for solving SCF: 0.74 s
+
+ Total energy is -21.6702604967
+ Total time for computing energy nuclear gradient: 1.32 s
+
+ Total job time:  1.37 s.
+ Mon Jul 13 15:11:27 2026
+
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using QCPBC. Have a nice day.    *
+        *                                                           *
+        *************************************************************
+
